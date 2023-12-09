@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxy2qfs3bj752"
-path="res://.godot/imported/Old World Fan.png-33f20f7c7a0cb4a7f11760d2d7d081a2.ctex"
+path="res://.godot/imported/Old World Fan.png-aee3d2533d25a752e5378b2e23b62659.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Materials/Old World Fan.png"
-dest_files=["res://.godot/imported/Old World Fan.png-33f20f7c7a0cb4a7f11760d2d7d081a2.ctex"]
+source_file="res://assets/Materials/Old World Fan.png"
+dest_files=["res://.godot/imported/Old World Fan.png-aee3d2533d25a752e5378b2e23b62659.ctex"]
 
 [params]
 

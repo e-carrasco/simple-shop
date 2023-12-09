@@ -35,8 +35,9 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="TextureButton" type="TextureButton" parent="map-outline/MainMenu"]
+[node name="Button" type="Button" parent="map-outline/MainMenu"]
 layout_mode = 2
+text = "Old Computer Part"
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0.0980392, 0.0980392, 0.0980392, 1)
