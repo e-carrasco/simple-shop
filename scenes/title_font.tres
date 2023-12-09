@@ -1,0 +1,5 @@
+[gd_resource type="SystemFont" format=3 uid="uid://ba70gtbrgwion"]
+
+[resource]
+font_names = PackedStringArray("Consolas")
+font_weight = 700
