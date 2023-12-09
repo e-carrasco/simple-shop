@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bixn52a7tu232"]
+[gd_scene load_steps=5 format=3 uid="uid://bixn52a7tu232"]
 
 [ext_resource type="Texture2D" uid="uid://rgpv7pbuxn5f" path="res://assets/worldmap.webp" id="1_xkrh2"]
+[ext_resource type="Texture2D" uid="uid://nr7flhpuqxk2" path="res://assets/Materials/Old PC Parts-84x84.png" id="2_4avps"]
 [ext_resource type="SystemFont" uid="uid://ba70gtbrgwion" path="res://scenes/title_font.tres" id="2_fpy7c"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_rqe7y"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_mmgsf"]
 
 [node name="MainMap" type="Node2D"]
 
@@ -12,6 +13,7 @@ position = Vector2(567, 370)
 texture = ExtResource("1_xkrh2")
 
 [node name="map-outline" type="MarginContainer" parent="."]
+layout_direction = 2
 offset_left = 57.0
 offset_top = -145.0
 offset_right = 1080.0
@@ -22,29 +24,31 @@ theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 120
 
 [node name="TextureRect" type="TextureRect" parent="map-outline"]
-modulate = Color(0.47451, 0.486275, 0.376471, 0.619608)
-show_behind_parent = true
+modulate = Color(0.698039, 0.392157, 0.270588, 0.756863)
 layout_mode = 2
-texture = SubResource("CanvasTexture_rqe7y")
+texture = SubResource("CanvasTexture_mmgsf")
 
 [node name="MainMenu" type="MarginContainer" parent="map-outline"]
 modulate = Color(1, 1, 1, 0.603922)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="map-outline/MainMenu"]
+[node name="Old Computer Part" type="Button" parent="map-outline/MainMenu"]
 layout_mode = 2
 text = "Old Computer Part"
+icon = ExtResource("2_4avps")
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0.0980392, 0.0980392, 0.0980392, 1)
-offset_left = 173.0
-offset_top = -24.0
-offset_right = 972.0
-offset_bottom = 8.0
+offset_left = 179.0
+offset_top = -38.0
+offset_right = 979.0
+offset_bottom = -7.0
 theme_override_fonts/font = ExtResource("2_fpy7c")
 theme_override_font_sizes/font_size = 27
 text = "Sample Shop"
