@@ -1,5 +1,11 @@
-[gd_scene format=3 uid="uid://bixn52a7tu232"]
+[gd_scene load_steps=2 format=3 uid="uid://bixn52a7tu232"]
+
+[ext_resource type="Texture2D" uid="uid://rgpv7pbuxn5f" path="res://Assets/worldmap.webp" id="1_xkrh2"]
 
 [node name="MainMap" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Worldmap" type="Sprite2D" parent="."]
+position = Vector2(513, 292)
+texture = ExtResource("1_xkrh2")
