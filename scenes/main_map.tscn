@@ -1,23 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://bixn52a7tu232"]
+[gd_scene load_steps=7 format=3 uid="uid://bixn52a7tu232"]
 
 [ext_resource type="Texture2D" uid="uid://rgpv7pbuxn5f" path="res://assets/worldmap.webp" id="1_xkrh2"]
 [ext_resource type="Texture2D" uid="uid://nr7flhpuqxk2" path="res://assets/Materials/Old PC Parts-84x84.png" id="2_4avps"]
 [ext_resource type="SystemFont" uid="uid://ba70gtbrgwion" path="res://scenes/title_font.tres" id="2_fpy7c"]
+[ext_resource type="Script" path="res://source/item_script.gd" id="3_mdx5f"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mmgsf"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_34i0p"]
+font = ExtResource("2_fpy7c")
+font_size = 71
+font_color = Color(0.054902, 0.156863, 0.0666667, 1)
+
 [node name="MainMap" type="Node2D"]
+position = Vector2(13, 43)
 
 [node name="Worldmap" type="Sprite2D" parent="."]
 position = Vector2(567, 370)
 texture = ExtResource("1_xkrh2")
 
 [node name="map-outline" type="MarginContainer" parent="."]
-layout_direction = 2
-offset_left = 57.0
-offset_top = -145.0
-offset_right = 1080.0
-offset_bottom = 885.0
+layout_direction = 1
+offset_left = 56.0
+offset_top = -142.0
+offset_right = 1078.0
+offset_bottom = 883.0
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 120
 theme_override_constants/margin_right = 120
@@ -28,27 +35,99 @@ modulate = Color(0.698039, 0.392157, 0.270588, 0.756863)
 layout_mode = 2
 texture = SubResource("CanvasTexture_mmgsf")
 
-[node name="MainMenu" type="MarginContainer" parent="map-outline"]
+[node name="VBoxContainer" type="VBoxContainer" parent="map-outline"]
+layout_direction = 1
+layout_mode = 2
+
+[node name="Shop Header" type="HBoxContainer" parent="map-outline/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Sample Shop"
+
+[node name="Label" type="Label" parent="map-outline/VBoxContainer/Shop Header"]
+modulate = Color(0.980392, 0.941176, 0.941176, 1)
+layout_mode = 2
+text = "Simple Shop"
+label_settings = SubResource("LabelSettings_34i0p")
+
+[node name="MainMenu" type="VBoxContainer" parent="map-outline/VBoxContainer"]
 modulate = Color(1, 1, 1, 0.603922)
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Item 1" type="HBoxContainer" parent="map-outline/VBoxContainer/MainMenu"]
+layout_direction = 2
+layout_mode = 2
+script = ExtResource("3_mdx5f")
+
+[node name="Timer" type="Timer" parent="map-outline/VBoxContainer/MainMenu/Item 1"]
+wait_time = 0.1
+
+[node name="Old Computer Part" type="Button" parent="map-outline/VBoxContainer/MainMenu/Item 1"]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Old Computer Part" type="Button" parent="map-outline/MainMenu"]
-layout_mode = 2
 text = "Old Computer Part"
 icon = ExtResource("2_4avps")
 
-[node name="Label" type="Label" parent="."]
-modulate = Color(0.0980392, 0.0980392, 0.0980392, 1)
-offset_left = 179.0
-offset_top = -38.0
-offset_right = 979.0
-offset_bottom = -7.0
-theme_override_fonts/font = ExtResource("2_fpy7c")
-theme_override_font_sizes/font_size = 27
-text = "Sample Shop"
+[node name="Label" type="Label" parent="map-outline/VBoxContainer/MainMenu/Item 1"]
+layout_mode = 2
+text = "0"
+
+[node name="ProgressBar" type="ProgressBar" parent="map-outline/VBoxContainer/MainMenu/Item 1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="Item 2" type="HBoxContainer" parent="map-outline/VBoxContainer/MainMenu"]
+layout_direction = 2
+layout_mode = 2
+script = ExtResource("3_mdx5f")
+
+[node name="Timer" type="Timer" parent="map-outline/VBoxContainer/MainMenu/Item 2"]
+wait_time = 0.1
+
+[node name="Old Computer Part" type="Button" parent="map-outline/VBoxContainer/MainMenu/Item 2"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Old Computer Part"
+icon = ExtResource("2_4avps")
+
+[node name="Label" type="Label" parent="map-outline/VBoxContainer/MainMenu/Item 2"]
+layout_mode = 2
+text = "0"
+
+[node name="ProgressBar" type="ProgressBar" parent="map-outline/VBoxContainer/MainMenu/Item 2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 200.0
+
+[node name="Item 3" type="HBoxContainer" parent="map-outline/VBoxContainer/MainMenu"]
+layout_direction = 2
+layout_mode = 2
+script = ExtResource("3_mdx5f")
+
+[node name="Timer" type="Timer" parent="map-outline/VBoxContainer/MainMenu/Item 3"]
+wait_time = 0.1
+
+[node name="Old Computer Part" type="Button" parent="map-outline/VBoxContainer/MainMenu/Item 3"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Old Computer Part"
+icon = ExtResource("2_4avps")
+
+[node name="Label" type="Label" parent="map-outline/VBoxContainer/MainMenu/Item 3"]
+layout_mode = 2
+text = "0"
+
+[node name="ProgressBar" type="ProgressBar" parent="map-outline/VBoxContainer/MainMenu/Item 3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[connection signal="timeout" from="map-outline/VBoxContainer/MainMenu/Item 1/Timer" to="map-outline/VBoxContainer/MainMenu/Item 1" method="_on_timer_timeout"]
+[connection signal="pressed" from="map-outline/VBoxContainer/MainMenu/Item 1/Old Computer Part" to="map-outline/VBoxContainer/MainMenu/Item 1" method="_on_old_computer_part_pressed"]
+[connection signal="timeout" from="map-outline/VBoxContainer/MainMenu/Item 2/Timer" to="map-outline/VBoxContainer/MainMenu/Item 2" method="_on_timer_timeout"]
+[connection signal="pressed" from="map-outline/VBoxContainer/MainMenu/Item 2/Old Computer Part" to="map-outline/VBoxContainer/MainMenu/Item 2" method="_on_old_computer_part_pressed"]
+[connection signal="timeout" from="map-outline/VBoxContainer/MainMenu/Item 3/Timer" to="map-outline/VBoxContainer/MainMenu/Item 3" method="_on_timer_timeout"]
+[connection signal="pressed" from="map-outline/VBoxContainer/MainMenu/Item 3/Old Computer Part" to="map-outline/VBoxContainer/MainMenu/Item 3" method="_on_old_computer_part_pressed"]
