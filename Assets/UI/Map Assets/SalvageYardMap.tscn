@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://deynsuanv43u1"]
+
+[ext_resource type="Texture2D" uid="uid://cj106nykv6af1" path="res://Assets/Map Assets/SalvageYard.png" id="1_jjc7h"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_jjc7h")

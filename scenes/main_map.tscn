@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://rgpv7pbuxn5f" path="res://Assets/worldmap.webp" id="1_xkrh2"]
 [ext_resource type="Texture2D" uid="uid://cdri2sa2b6kx1" path="res://Assets/UI/ShopUI.png" id="2_1cor2"]
 [ext_resource type="Texture2D" uid="uid://nr7flhpuqxk2" path="res://Assets/Materials/Old PC Parts-84x84.png" id="2_4avps"]
-[ext_resource type="FontFile" uid="uid://cdxtu7juvad2w" path="res://Assets/Fonts/RUNESCAPE_UF.TTF" id="3_fbmrq"]
+[ext_resource type="FontFile" uid="uid://cdxtu7juvad2w" path="res://Fonts/RUNESCAPE_UF.TTF" id="3_fbmrq"]
 [ext_resource type="Script" path="res://source/item_script.gd" id="3_mdx5f"]
 [ext_resource type="Texture2D" uid="uid://31v2bbiaghl4" path="res://Assets/UI/Icons/ExitIcon2.png" id="4_wfu1g"]
 [ext_resource type="Texture2D" uid="uid://d0ja2woeqtkhq" path="res://Assets/UI/Icons/ExitIcon2pressed.png" id="5_w401b"]
@@ -152,7 +152,7 @@ icon = ExtResource("11_0vflv")
 
 [node name="Label" type="Label" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 2"]
 layout_mode = 2
-text = " 0 "
+text = "              0 "
 label_settings = ExtResource("10_3xdqv")
 
 [node name="ProgressBorder" type="TextureRect" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 2"]

@@ -1,6 +1,6 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://clxgjncscrap6"]
 
-[ext_resource type="FontFile" uid="uid://cdxtu7juvad2w" path="res://Assets/Fonts/RUNESCAPE_UF.TTF" id="1_tiipu"]
+[ext_resource type="FontFile" uid="uid://cdxtu7juvad2w" path="res://Fonts/RUNESCAPE_UF.TTF" id="1_tiipu"]
 
 [resource]
 font = ExtResource("1_tiipu")

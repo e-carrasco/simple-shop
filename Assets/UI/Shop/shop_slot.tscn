@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://co4ivyp0yw226"]
+
+[ext_resource type="Texture2D" uid="uid://espx78n404ts" path="res://Assets/UI/Shop/ShopGrid.png" id="1_eimdf"]
+
+[node name="Shop1" type="TextureRect"]
+custom_minimum_size = Vector2(28, 28)
+offset_right = 28.0
+offset_bottom = 28.0
+texture = ExtResource("1_eimdf")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 42.0
+scale = Vector2(0.906321, 0.886848)
