@@ -155,12 +155,21 @@ layout_mode = 2
 text = " 0 "
 label_settings = ExtResource("10_3xdqv")
 
-[node name="ProgressBar" type="ProgressBar" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 2"]
+[node name="ProgressBorder" type="TextureRect" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 2"]
 layout_mode = 2
+size_flags_horizontal = 10
+texture = ExtResource("11_uyohd")
+
+[node name="ProgressBar" type="ProgressBar" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 2/ProgressBorder"]
+layout_mode = 2
+offset_left = 25.4728
+offset_top = 16.5323
+offset_right = 422.473
+offset_bottom = 116.532
+scale = Vector2(0.89515, 0.556073)
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme = ExtResource("8_ghwqa")
-max_value = 200.0
 
 [node name="Item 3" type="HBoxContainer" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu"]
 layout_direction = 2
@@ -182,8 +191,18 @@ layout_mode = 2
 text = " 0 "
 label_settings = ExtResource("10_3xdqv")
 
-[node name="ProgressBar" type="ProgressBar" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 3"]
+[node name="ProgressBorder" type="TextureRect" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 3"]
 layout_mode = 2
+size_flags_horizontal = 10
+texture = ExtResource("11_uyohd")
+
+[node name="ProgressBar" type="ProgressBar" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 3/ProgressBorder"]
+layout_mode = 2
+offset_left = 25.4728
+offset_top = 16.5323
+offset_right = 422.473
+offset_bottom = 116.532
+scale = Vector2(0.89515, 0.556073)
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme = ExtResource("8_ghwqa")
