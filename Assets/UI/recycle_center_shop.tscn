@@ -108,15 +108,117 @@ texture_hover = ExtResource("9_gnmsi")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="ScrollContainer" type="ScrollContainer" parent="ShopWindow/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="ShopWindow/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
 
-[node name="GridContainer" type="GridContainer" parent="ShopWindow/VBoxContainer/ScrollContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="ShopWindow/VBoxContainer/MarginContainer"]
 layout_mode = 2
-columns = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="ShopWindow/VBoxContainer/ScrollContainer/GridContainer"]
+[node name="GridContainer" type="GridContainer" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="Slot1" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot4" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot5" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot6" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot7" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot8" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot9" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot10" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot11" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot12" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot13" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot14" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot15" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("10_7kbmc")
+expand_mode = 1
+
+[node name="Slot16" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("10_7kbmc")
 expand_mode = 1
