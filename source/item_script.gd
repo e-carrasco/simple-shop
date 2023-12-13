@@ -22,10 +22,10 @@ func _on_old_computer_part_pressed():
 # Starts the generation of items. Once complete, the timer will stop, and reset the progress bar.
 func _on_timer_timeout():	
 	if start_item_creation:
-		$ProgressBar.value += 1
-	if $ProgressBar.value >= $ProgressBar.max_value:
+		$TextureRect/ProgressBar.value += 1
+	if $TextureRect/ProgressBar.value >= $TextureRect/ProgressBar.max_value:
 		counter += 1
 		$Timer.stop()
-		$ProgressBar.value = 0
+		$TextureRect/ProgressBar.value = 0
 		start_item_creation = false
 	

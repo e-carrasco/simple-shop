@@ -1,17 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://bixn52a7tu232"]
+[gd_scene load_steps=15 format=3 uid="uid://bixn52a7tu232"]
 
 [ext_resource type="Texture2D" uid="uid://rgpv7pbuxn5f" path="res://Assets/worldmap.webp" id="1_xkrh2"]
 [ext_resource type="Texture2D" uid="uid://cdri2sa2b6kx1" path="res://Assets/UI/ShopUI.png" id="2_1cor2"]
 [ext_resource type="Texture2D" uid="uid://nr7flhpuqxk2" path="res://Assets/Materials/Old PC Parts-84x84.png" id="2_4avps"]
 [ext_resource type="FontFile" uid="uid://cdxtu7juvad2w" path="res://Assets/Fonts/RUNESCAPE_UF.TTF" id="3_fbmrq"]
 [ext_resource type="Script" path="res://source/item_script.gd" id="3_mdx5f"]
-[ext_resource type="Texture2D" uid="uid://31v2bbiaghl4" path="res://Assets/UI/ExitIcon2.png" id="4_wfu1g"]
-[ext_resource type="Texture2D" uid="uid://d0ja2woeqtkhq" path="res://Assets/UI/ExitIcon2pressed.png" id="5_w401b"]
-[ext_resource type="Texture2D" uid="uid://c8vahy46bfhjb" path="res://Assets/UI/ExitIcon2hover.png" id="6_tkwgt"]
+[ext_resource type="Texture2D" uid="uid://31v2bbiaghl4" path="res://Assets/UI/Icons/ExitIcon2.png" id="4_wfu1g"]
+[ext_resource type="Texture2D" uid="uid://d0ja2woeqtkhq" path="res://Assets/UI/Icons/ExitIcon2pressed.png" id="5_w401b"]
+[ext_resource type="Texture2D" uid="uid://c8vahy46bfhjb" path="res://Assets/UI/Icons/ExitIcon2hover.png" id="6_tkwgt"]
 [ext_resource type="Theme" uid="uid://cawy2ac1uf0dk" path="res://Assets/Themes/ShopTheme.tres" id="8_ghwqa"]
 [ext_resource type="Texture2D" uid="uid://c6yix5501p2p2" path="res://Assets/Materials/OldFanV184x84.png" id="9_jiq1d"]
 [ext_resource type="LabelSettings" uid="uid://clxgjncscrap6" path="res://Assets/Themes/LabelShop.tres" id="10_3xdqv"]
 [ext_resource type="Texture2D" uid="uid://cn7is2eiapdbi" path="res://Assets/Materials/OldWorldCPU84x84.png" id="11_0vflv"]
+[ext_resource type="Texture2D" uid="uid://ca8j7l0cj2dpg" path="res://Assets/UI/Icons/ProgressBar.png" id="11_uyohd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_34i0p"]
 font = ExtResource("3_fbmrq")
@@ -118,8 +119,18 @@ horizontal_alignment = 1
 visible_characters = -3
 visible_ratio = -1.0
 
-[node name="ProgressBar" type="ProgressBar" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 1"]
+[node name="ProgressBorder" type="TextureRect" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 1"]
 layout_mode = 2
+size_flags_horizontal = 10
+texture = ExtResource("11_uyohd")
+
+[node name="ProgressBar" type="ProgressBar" parent="map-outline/NinePatchRect/VBoxContainer/MainMenu/Item 1/ProgressBorder"]
+layout_mode = 2
+offset_left = 25.4728
+offset_top = 16.5323
+offset_right = 422.473
+offset_bottom = 116.532
+scale = Vector2(0.89515, 0.556073)
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme = ExtResource("8_ghwqa")
