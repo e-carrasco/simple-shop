@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cawy2ac1uf0dk"]
+
+[ext_resource type="FontFile" uid="uid://cdxtu7juvad2w" path="res://Assets/Fonts/RUNESCAPE_UF.TTF" id="1_qgupd"]
+
+[resource]
+Button/constants/h_separation = 40
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_qgupd")
+ProgressBar/font_sizes/font_size = 24
+ProgressBar/fonts/font = ExtResource("1_qgupd")

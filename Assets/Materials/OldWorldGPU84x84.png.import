@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5ebuah6pjman"
-path="res://.godot/imported/Old PC Parts.png-1c0c0de888d4336271721d4a7e9e6980.ctex"
+uid="uid://b4h2cyy8s5iqa"
+path="res://.godot/imported/OldWorldGPU84x84.png-172ea6f4971e08597eb15b47dfc0cf00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Materials/Old PC Parts.png"
-dest_files=["res://.godot/imported/Old PC Parts.png-1c0c0de888d4336271721d4a7e9e6980.ctex"]
+source_file="res://Assets/Materials/OldWorldGPU84x84.png"
+dest_files=["res://.godot/imported/OldWorldGPU84x84.png-172ea6f4971e08597eb15b47dfc0cf00.ctex"]
 
 [params]
 
