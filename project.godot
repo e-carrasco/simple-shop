@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Simple-shop"
-run/main_scene="res://scenes/main_map.tscn"
+run/main_scene="res://WorldMap.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/mode=3
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [rendering]
 

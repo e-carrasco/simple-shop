@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bb0x8rjlreu8r"]
+
+[ext_resource type="Texture2D" uid="uid://bocck5b7i04xy" path="res://Assets/UI/Map Assets/worldmap.png" id="1_0eihe"]
+[ext_resource type="Texture2D" uid="uid://bdbp6yhjmpura" path="res://Assets/UI/Map Assets/salvage tile.png" id="2_7wag4"]
+[ext_resource type="Texture2D" uid="uid://balsuoyjgy8si" path="res://Assets/UI/Map Assets/salvage tilepressed.png" id="3_ipigf"]
+[ext_resource type="Texture2D" uid="uid://cgscci635ljmb" path="res://Assets/UI/Map Assets/salvage tilehover.png" id="4_pko7b"]
+[ext_resource type="Texture2D" uid="uid://yhwg61b3ciqo" path="res://Assets/UI/Map Assets/recyclecenter.png" id="5_6mp5c"]
+[ext_resource type="Texture2D" uid="uid://bt4hhn3jwrdqn" path="res://Assets/UI/Map Assets/recyclecenterpressed.png" id="6_sc6hf"]
+[ext_resource type="Texture2D" uid="uid://dl8nt60ouamqh" path="res://Assets/UI/Map Assets/recyclecenterhover.png" id="7_jg3d7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_0eihe")
+expand_mode = 2
+
+[node name="Salvageyard" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_left = 356.0
+offset_top = 542.0
+offset_right = 456.0
+offset_bottom = 642.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_7wag4")
+texture_pressed = ExtResource("3_ipigf")
+texture_hover = ExtResource("4_pko7b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RecyclecCenter" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_left = 520.0
+offset_top = 458.0
+offset_right = 620.0
+offset_bottom = 558.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_6mp5c")
+texture_pressed = ExtResource("6_sc6hf")
+texture_hover = ExtResource("7_jg3d7")
+ignore_texture_size = true
+stretch_mode = 0

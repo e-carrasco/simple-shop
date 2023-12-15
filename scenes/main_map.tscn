@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bixn52a7tu232"]
 
-[ext_resource type="Texture2D" uid="uid://rgpv7pbuxn5f" path="res://Assets/worldmap.webp" id="1_xkrh2"]
+[ext_resource type="Texture2D" uid="uid://bocck5b7i04xy" path="res://Assets/UI/Map Assets/worldmap.png" id="1_s8bfd"]
 [ext_resource type="PackedScene" uid="uid://c6o6evrxr721q" path="res://CraftingUI.tscn" id="2_ukhmg"]
 
 [node name="MainMap" type="Node2D"]
@@ -8,18 +8,26 @@ position = Vector2(13, 43)
 
 [node name="Worldmap" type="Sprite2D" parent="."]
 position = Vector2(567, 370)
-texture = ExtResource("1_xkrh2")
+scale = Vector2(1.12952, 0.813577)
+texture = ExtResource("1_s8bfd")
 
-[node name="map-outline" type="MarginContainer" parent="."]
-layout_direction = 1
-offset_left = 56.0
-offset_top = -142.0
-offset_right = 1078.0
-offset_bottom = 883.0
+[node name="map-outline" type="MarginContainer" parent="Worldmap"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -512.0
+offset_top = -512.0
+offset_right = -512.0
+offset_bottom = -512.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 120
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 120
 
-[node name="Crafting" parent="map-outline" instance=ExtResource("2_ukhmg")]
+[node name="Crafting" parent="Worldmap/map-outline" instance=ExtResource("2_ukhmg")]
+visible = false
 layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
