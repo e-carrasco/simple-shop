@@ -15,11 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dfk1ddlve4v13" path="res://Assets/UI/Shop/ExitSign/ExitSignPressed.png" id="10_iiysm"]
 [ext_resource type="Texture2D" uid="uid://ekbxkig7ssoa" path="res://Assets/UI/Shop/ExitSign/ExitSignHover.png" id="11_jupk7"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_u3uhk"]
-font_size = 14
-font_color = Color(0, 0, 0, 1)
-shadow_color = Color(0.81901, 0.575683, 0.210194, 0.705882)
-
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_o2kh6"]
 frames = 3
 frame_0/texture = ExtResource("7_sxbti")
@@ -27,6 +22,11 @@ frame_1/texture = ExtResource("8_6hexs")
 frame_1/duration = 1.0
 frame_2/texture = ExtResource("9_psgl8")
 frame_2/duration = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_u3uhk"]
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+shadow_color = Color(0.81901, 0.575683, 0.210194, 0.705882)
 
 [node name="RecycleCenterShop" type="Node2D"]
 
@@ -42,8 +42,35 @@ grow_vertical = 2
 texture = ExtResource("1_1f81g")
 expand_mode = 1
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/TextureRect"]
+[node name="Control" type="Control" parent="CanvasLayer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ExitSceneButton" type="TextureButton" parent="CanvasLayer/Control"]
 layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.128
+anchor_top = 0.892
+anchor_right = 0.128
+anchor_bottom = 0.892
+offset_left = -84.456
+offset_top = -43.016
+offset_right = 789.544
+offset_bottom = 270.984
+scale = Vector2(0.194449, 0.272819)
+texture_normal = SubResource("AnimatedTexture_o2kh6")
+texture_pressed = ExtResource("10_iiysm")
+texture_hover = ExtResource("11_jupk7")
+stretch_mode = 0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_left = 0.532
 anchor_top = 0.461
@@ -83,7 +110,7 @@ anchor_right = 0.943
 anchor_bottom = 0.938
 offset_left = 2.16
 offset_top = 0.119999
-offset_right = -1.76001
+offset_right = -1.76004
 offset_bottom = 18.84
 grow_horizontal = 2
 grow_vertical = 2
@@ -109,15 +136,15 @@ size_flags_horizontal = 3
 
 [node name="Button" type="TextureButton" parent="CanvasLayer/ShopWindow/VBoxContainer/ShopTitleBar/Exit"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -4.5
-offset_top = -9.0
-offset_right = 12.5
-offset_bottom = 8.0
+anchors_preset = -1
+anchor_left = 0.563
+anchor_top = 0.475
+anchor_right = 0.563
+anchor_bottom = 0.475
+offset_left = -8.469
+offset_top = -8.5
+offset_right = 8.531
+offset_bottom = 8.5
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("7_qw7nf")
@@ -240,31 +267,3 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("10_7kbmc")
 expand_mode = 1
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-custom_minimum_size = Vector2(60, 60)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="ExitSceneButton" type="TextureButton" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.128
-anchor_top = 0.892
-anchor_right = 0.128
-anchor_bottom = 0.892
-offset_left = -84.456
-offset_top = -43.016
-offset_right = 789.544
-offset_bottom = 270.984
-scale = Vector2(0.194449, 0.272819)
-texture_normal = SubResource("AnimatedTexture_o2kh6")
-texture_pressed = ExtResource("10_iiysm")
-texture_hover = ExtResource("11_jupk7")
-stretch_mode = 0
