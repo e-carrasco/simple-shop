@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bixn52a7tu232"]
 
-[ext_resource type="Texture2D" uid="uid://bocck5b7i04xy" path="res://Assets/UI/Map Assets/worldmap.png" id="1_s8bfd"]
-[ext_resource type="PackedScene" uid="uid://c6o6evrxr721q" path="res://CraftingUI.tscn" id="2_ukhmg"]
+[ext_resource type="Texture2D" uid="uid://dmeh6vscrgtmy" path="res://assets/UI/Map Assets/worldmap.png" id="1_s8bfd"]
+[ext_resource type="PackedScene" uid="uid://c6o6evrxr721q" path="res://scenes/CraftingUI.tscn" id="2_ukhmg"]
 
 [node name="MainMap" type="Node2D"]
 position = Vector2(13, 43)
