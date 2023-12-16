@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://bfaymcp0dc2ea"]
 
-[ext_resource type="Texture2D" uid="uid://bocck5b7i04xy" path="res://Assets/UI/Map Assets/worldmap.png" id="1_0eihe"]
-[ext_resource type="Texture2D" uid="uid://bdbp6yhjmpura" path="res://Assets/UI/Map Assets/salvage tile.png" id="2_7wag4"]
-[ext_resource type="Texture2D" uid="uid://balsuoyjgy8si" path="res://Assets/UI/Map Assets/salvage tilepressed.png" id="3_ipigf"]
-[ext_resource type="Texture2D" uid="uid://cgscci635ljmb" path="res://Assets/UI/Map Assets/salvage tilehover.png" id="4_pko7b"]
-[ext_resource type="Texture2D" uid="uid://yhwg61b3ciqo" path="res://Assets/UI/Map Assets/recyclecenter.png" id="5_6mp5c"]
-[ext_resource type="Texture2D" uid="uid://bt4hhn3jwrdqn" path="res://Assets/UI/Map Assets/recyclecenterpressed.png" id="6_sc6hf"]
-[ext_resource type="Texture2D" uid="uid://dl8nt60ouamqh" path="res://Assets/UI/Map Assets/recyclecenterhover.png" id="7_jg3d7"]
+[ext_resource type="Texture2D" uid="uid://dmeh6vscrgtmy" path="res://Assets/UI/Map Assets/worldmap.png" id="1_0eihe"]
+[ext_resource type="Texture2D" uid="uid://dgv2tvtosk8l1" path="res://Assets/UI/Map Assets/salvage tile.png" id="2_7wag4"]
+[ext_resource type="Texture2D" uid="uid://cm5g30y5xq1hf" path="res://Assets/UI/Map Assets/salvage tilepressed.png" id="3_ipigf"]
+[ext_resource type="Texture2D" uid="uid://mu5ek1648u5o" path="res://Assets/UI/Map Assets/salvage tilehover.png" id="4_pko7b"]
+[ext_resource type="Texture2D" uid="uid://b22vl358joo7v" path="res://Assets/UI/Map Assets/recyclecenter.png" id="5_6mp5c"]
+[ext_resource type="Texture2D" uid="uid://ieepl1jm5maw" path="res://Assets/UI/Map Assets/recyclecenterpressed.png" id="6_sc6hf"]
+[ext_resource type="Texture2D" uid="uid://dbi27gr7dwycx" path="res://Assets/UI/Map Assets/recyclecenterhover.png" id="7_jg3d7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
