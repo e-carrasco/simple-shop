@@ -1,12 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://co4ivyp0yw226"]
 
-[ext_resource type="Texture2D" uid="uid://espx78n404ts" path="res://Assets/UI/Shop/ShopGrid.png" id="1_eimdf"]
+[ext_resource type="Texture2D" uid="uid://bht3o1tntpttu" path="res://Assets/UI/Shop/ShopGrid.png" id="1_ismts"]
 
 [node name="Shop1" type="TextureRect"]
 custom_minimum_size = Vector2(28, 28)
 offset_right = 28.0
 offset_bottom = 28.0
-texture = ExtResource("1_eimdf")
+texture = ExtResource("1_ismts")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 0

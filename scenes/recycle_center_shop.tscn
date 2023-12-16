@@ -1,19 +1,20 @@
-[gd_scene load_steps=17 format=3 uid="uid://peou28wsfapx"]
+[gd_scene load_steps=18 format=3 uid="uid://peou28wsfapx"]
 
-[ext_resource type="Texture2D" uid="uid://d17cyhnhnaj8f" path="res://Assets/UI/Map Assets/RecycleCenterShop.png" id="1_1f81g"]
-[ext_resource type="Texture2D" uid="uid://bnojnsab0t0bh" path="res://Assets/UI/Shop/ShopUI.png" id="2_akioi"]
-[ext_resource type="Texture2D" uid="uid://b3ey5uhke0we5" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButton.png" id="2_f7ifp"]
-[ext_resource type="Texture2D" uid="uid://7bu3bwcsm3cn" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButtonPressed.png" id="3_8ghdk"]
-[ext_resource type="Texture2D" uid="uid://bphd7yytmg4te" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButtonHover.png" id="3_owymh"]
-[ext_resource type="Texture2D" uid="uid://bfvl4p5hsafu4" path="res://Assets/UI/Shop/ExitIcon2.png" id="7_qw7nf"]
-[ext_resource type="Texture2D" uid="uid://cu2gw1tj5xflk" path="res://Assets/UI/Shop/ExitSign/ExitSignGlow1.png" id="7_sxbti"]
-[ext_resource type="Texture2D" uid="uid://b7p2lkb4na62m" path="res://Assets/UI/Shop/ExitSign/ExitSignBase.png" id="8_6hexs"]
-[ext_resource type="Texture2D" uid="uid://bcn6bqs5yoqgi" path="res://Assets/UI/Shop/ExitIcon2pressed.png" id="8_gfd43"]
-[ext_resource type="Texture2D" uid="uid://dlwowlhbdju1l" path="res://Assets/UI/Shop/ExitIcon2hover.png" id="9_gnmsi"]
-[ext_resource type="Texture2D" uid="uid://bohmvx3lqpthg" path="res://Assets/UI/Shop/ExitSign/ExitSignGlow2.png" id="9_psgl8"]
-[ext_resource type="Texture2D" uid="uid://espx78n404ts" path="res://Assets/UI/Shop/ShopGrid.png" id="10_7kbmc"]
-[ext_resource type="Texture2D" uid="uid://dfk1ddlve4v13" path="res://Assets/UI/Shop/ExitSign/ExitSignPressed.png" id="10_iiysm"]
-[ext_resource type="Texture2D" uid="uid://ekbxkig7ssoa" path="res://Assets/UI/Shop/ExitSign/ExitSignHover.png" id="11_jupk7"]
+[ext_resource type="Script" path="res://source/recycle_center_shop.gd" id="1_25r4v"]
+[ext_resource type="Texture2D" uid="uid://34uy4thfehjh" path="res://Assets/UI/Map Assets/RecycleCenterShop.png" id="2_rieeh"]
+[ext_resource type="Texture2D" uid="uid://b08jjqwwilisd" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButton.png" id="3_2qgif"]
+[ext_resource type="Texture2D" uid="uid://b1vtvky2npwxn" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButtonPressed.png" id="4_o08t5"]
+[ext_resource type="Texture2D" uid="uid://cqo0oqjin7wsf" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButtonHover.png" id="5_wd30b"]
+[ext_resource type="Texture2D" uid="uid://r16sb513wkua" path="res://Assets/UI/Shop/ShopUI.png" id="6_wl0hl"]
+[ext_resource type="Texture2D" uid="uid://c0yhdq61up10b" path="res://Assets/UI/Shop/ExitIcon2.png" id="7_wjrux"]
+[ext_resource type="Texture2D" uid="uid://bjkcvblfpygma" path="res://Assets/UI/Shop/ExitIcon2pressed.png" id="8_lde5t"]
+[ext_resource type="Texture2D" uid="uid://4a3g6gwuwiiu" path="res://Assets/UI/Shop/ExitIcon2hover.png" id="9_lkwal"]
+[ext_resource type="Texture2D" uid="uid://bht3o1tntpttu" path="res://Assets/UI/Shop/ShopGrid.png" id="10_5fmqu"]
+[ext_resource type="Texture2D" uid="uid://c6u6uc0fmj8as" path="res://Assets/UI/Shop/ExitSign/ExitSignGlow1.png" id="11_w443f"]
+[ext_resource type="Texture2D" uid="uid://dcptvumax0stf" path="res://Assets/UI/Shop/ExitSign/ExitSignBase.png" id="12_0cgia"]
+[ext_resource type="Texture2D" uid="uid://de8ovbk3flxty" path="res://Assets/UI/Shop/ExitSign/ExitSignGlow2.png" id="13_vxu2u"]
+[ext_resource type="Texture2D" uid="uid://c1do8wagvb255" path="res://Assets/UI/Shop/ExitSign/ExitSignPressed.png" id="14_ti8bv"]
+[ext_resource type="Texture2D" uid="uid://q4g6mjjt5fd5" path="res://Assets/UI/Shop/ExitSign/ExitSignHover.png" id="15_1321n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u3uhk"]
 font_size = 14
@@ -22,31 +23,32 @@ shadow_color = Color(0.81901, 0.575683, 0.210194, 0.705882)
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_o2kh6"]
 frames = 3
-frame_0/texture = ExtResource("7_sxbti")
-frame_1/texture = ExtResource("8_6hexs")
+frame_0/texture = ExtResource("11_w443f")
+frame_1/texture = ExtResource("12_0cgia")
 frame_1/duration = 1.0
-frame_2/texture = ExtResource("9_psgl8")
+frame_2/texture = ExtResource("13_vxu2u")
 frame_2/duration = 1.0
 
 [node name="RecycleCenterShop" type="Node2D"]
+script = ExtResource("1_25r4v")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1150, 640)
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_1f81g")
+texture = ExtResource("2_rieeh")
 expand_mode = 1
 
-[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+[node name="shop_keeper" type="TextureButton" parent="TextureRect"]
 layout_mode = 0
 offset_left = 613.0
 offset_top = 299.0
 offset_right = 728.0
 offset_bottom = 399.0
 scale = Vector2(0.980001, 0.954003)
-texture_normal = ExtResource("2_f7ifp")
-texture_pressed = ExtResource("3_8ghdk")
-texture_hover = ExtResource("3_owymh")
+texture_normal = ExtResource("3_2qgif")
+texture_pressed = ExtResource("4_o08t5")
+texture_hover = ExtResource("5_wd30b")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -56,7 +58,7 @@ offset_top = 116.0
 offset_right = 1088.0
 offset_bottom = 436.0
 scale = Vector2(1.12037, 1.43219)
-texture = ExtResource("2_akioi")
+texture = ExtResource("6_wl0hl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ShopWindow"]
 layout_mode = 1
@@ -102,9 +104,9 @@ offset_right = 12.5
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("7_qw7nf")
-texture_pressed = ExtResource("8_gfd43")
-texture_hover = ExtResource("9_gnmsi")
+texture_normal = ExtResource("7_wjrux")
+texture_pressed = ExtResource("8_lde5t")
+texture_hover = ExtResource("9_lkwal")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -130,97 +132,97 @@ columns = 4
 [node name="Slot1" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot2" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot3" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot4" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot5" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot6" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot7" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot8" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot9" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot10" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot11" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot12" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot13" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot14" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot15" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Slot16" type="TextureRect" parent="ShopWindow/VBoxContainer/MarginContainer/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("10_7kbmc")
+texture = ExtResource("10_5fmqu")
 expand_mode = 1
 
 [node name="Control" type="Control" parent="."]
@@ -240,6 +242,10 @@ offset_right = 917.0
 offset_bottom = 851.0
 scale = Vector2(0.194449, 0.272819)
 texture_normal = SubResource("AnimatedTexture_o2kh6")
-texture_pressed = ExtResource("10_iiysm")
-texture_hover = ExtResource("11_jupk7")
+texture_pressed = ExtResource("14_ti8bv")
+texture_hover = ExtResource("15_1321n")
 stretch_mode = 0
+
+[connection signal="pressed" from="TextureRect/shop_keeper" to="." method="_on_shop_keeper_pressed"]
+[connection signal="pressed" from="ShopWindow/VBoxContainer/ShopTitleBar/Exit/Button" to="." method="_on_exit_shop_button_pressed"]
+[connection signal="pressed" from="Control/ExitSceneButton" to="." method="_on_exit_scene_button_pressed"]
