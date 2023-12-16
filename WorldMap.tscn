@@ -17,68 +17,89 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-offset_right = 1152.0
-offset_bottom = 648.0
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_0eihe")
-expand_mode = 2
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Salvageyard" type="TextureButton" parent="."]
+[node name="Salvageyard" type="TextureButton" parent="CanvasLayer"]
 custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-offset_left = 349.0
-offset_top = 540.0
-offset_right = 449.0
-offset_bottom = 640.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+anchors_preset = -1
+anchor_left = 0.359
+anchor_top = 0.912
+anchor_right = 0.359
+anchor_bottom = 0.912
+offset_left = -49.568
+offset_top = -49.976
+offset_right = 50.432
+offset_bottom = 50.024
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture_normal = ExtResource("2_7wag4")
 texture_pressed = ExtResource("3_ipigf")
 texture_hover = ExtResource("4_pko7b")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="RecyclecCenter" type="TextureButton" parent="."]
+[node name="RecyclecCenter" type="TextureButton" parent="CanvasLayer"]
 custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-offset_left = 520.0
-offset_top = 458.0
-offset_right = 620.0
-offset_bottom = 558.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.778
+anchor_right = 0.486
+anchor_bottom = 0.778
+offset_left = -77.872
+offset_top = -52.144
+offset_right = 874.128
+offset_bottom = 818.856
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.163061, 0.119769)
 texture_normal = ExtResource("5_6mp5c")
 texture_pressed = ExtResource("6_sc6hf")
 texture_hover = ExtResource("7_jg3d7")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-offset_left = 185.0
-offset_top = 430.0
-offset_right = 366.0
-offset_bottom = 566.0
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.26
+anchor_top = 0.765
+anchor_right = 0.26
+anchor_bottom = 0.765
+offset_left = -90.52
+offset_top = -67.72
+offset_right = 90.48
+offset_bottom = 68.28
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="2" type="Button" parent="VBoxContainer"]
+[node name="2" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Search for Two Hours
 "
 
-[node name="4" type="Button" parent="VBoxContainer"]
+[node name="4" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Search for Four Hours
 "
 
-[node name="8" type="Button" parent="VBoxContainer"]
+[node name="8" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Search for Eight Hours"
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Exit
 "
 
-[connection signal="visibility_changed" from="VBoxContainer" to="Salvageyard" method="_on_v_box_container_visibility_changed"]
+[connection signal="visibility_changed" from="CanvasLayer/VBoxContainer" to="CanvasLayer/Salvageyard" method="_on_v_box_container_visibility_changed"]
