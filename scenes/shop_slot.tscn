@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://co4ivyp0yw226"]
 
-[ext_resource type="Texture2D" uid="uid://bht3o1tntpttu" path="res://Assets/UI/Shop/ShopGrid.png" id="1_ismts"]
+[ext_resource type="Texture2D" uid="uid://bht3o1tntpttu" path="res://assets/UI/Shop/ShopGrid.png" id="1_ismts"]
 
 [node name="Shop1" type="TextureRect"]
 custom_minimum_size = Vector2(28, 28)

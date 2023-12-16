@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://cawy2ac1uf0dk"]
 
-[ext_resource type="FontFile" uid="uid://ul83x5yv0ae8" path="res://Fonts/ELLIOTSANS-BOLD.TTF" id="2_ngkit"]
+[ext_resource type="FontFile" uid="uid://bmmdpf5nuq5wm" path="res://Fonts/ELLIOTSANS-BOLD.TTF" id="2_ngkit"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ht448"]
 bg_color = Color(0.160784, 0.580392, 0.662745, 1)

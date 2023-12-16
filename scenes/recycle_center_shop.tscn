@@ -1,19 +1,20 @@
-[gd_scene load_steps=17 format=3 uid="uid://peou28wsfapx"]
+[gd_scene load_steps=18 format=3 uid="uid://peou28wsfapx"]
 
-[ext_resource type="Texture2D" uid="uid://d17cyhnhnaj8f" path="res://Assets/UI/Map Assets/RecycleCenterShop.png" id="1_1f81g"]
-[ext_resource type="Texture2D" uid="uid://bnojnsab0t0bh" path="res://Assets/UI/Shop/ShopUI.png" id="2_akioi"]
-[ext_resource type="Texture2D" uid="uid://b3ey5uhke0we5" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButton.png" id="2_f7ifp"]
-[ext_resource type="Texture2D" uid="uid://7bu3bwcsm3cn" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButtonPressed.png" id="3_8ghdk"]
-[ext_resource type="Texture2D" uid="uid://bphd7yytmg4te" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButtonHover.png" id="3_owymh"]
-[ext_resource type="Texture2D" uid="uid://bfvl4p5hsafu4" path="res://Assets/UI/Shop/ExitIcon2.png" id="7_qw7nf"]
-[ext_resource type="Texture2D" uid="uid://cu2gw1tj5xflk" path="res://Assets/UI/Shop/ExitSign/ExitSignGlow1.png" id="7_sxbti"]
-[ext_resource type="Texture2D" uid="uid://b7p2lkb4na62m" path="res://Assets/UI/Shop/ExitSign/ExitSignBase.png" id="8_6hexs"]
-[ext_resource type="Texture2D" uid="uid://bcn6bqs5yoqgi" path="res://Assets/UI/Shop/ExitIcon2pressed.png" id="8_gfd43"]
-[ext_resource type="Texture2D" uid="uid://dlwowlhbdju1l" path="res://Assets/UI/Shop/ExitIcon2hover.png" id="9_gnmsi"]
-[ext_resource type="Texture2D" uid="uid://bohmvx3lqpthg" path="res://Assets/UI/Shop/ExitSign/ExitSignGlow2.png" id="9_psgl8"]
-[ext_resource type="Texture2D" uid="uid://espx78n404ts" path="res://Assets/UI/Shop/ShopGrid.png" id="10_7kbmc"]
-[ext_resource type="Texture2D" uid="uid://dfk1ddlve4v13" path="res://Assets/UI/Shop/ExitSign/ExitSignPressed.png" id="10_iiysm"]
-[ext_resource type="Texture2D" uid="uid://ekbxkig7ssoa" path="res://Assets/UI/Shop/ExitSign/ExitSignHover.png" id="11_jupk7"]
+[ext_resource type="Texture2D" uid="uid://34uy4thfehjh" path="res://Assets/UI/Map Assets/RecycleCenterShop.png" id="1_1f81g"]
+[ext_resource type="Script" path="res://source/recycle_center_shop.gd" id="1_wrmqw"]
+[ext_resource type="Texture2D" uid="uid://r16sb513wkua" path="res://Assets/UI/Shop/ShopUI.png" id="2_akioi"]
+[ext_resource type="Texture2D" uid="uid://b08jjqwwilisd" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButton.png" id="2_f7ifp"]
+[ext_resource type="Texture2D" uid="uid://b1vtvky2npwxn" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButtonPressed.png" id="3_8ghdk"]
+[ext_resource type="Texture2D" uid="uid://cqo0oqjin7wsf" path="res://Assets/UI/Shop/Shopkeeper/RecCentShopKButtonHover.png" id="3_owymh"]
+[ext_resource type="Texture2D" uid="uid://c0yhdq61up10b" path="res://Assets/UI/Shop/ExitIcon2.png" id="7_qw7nf"]
+[ext_resource type="Texture2D" uid="uid://c6u6uc0fmj8as" path="res://Assets/UI/Shop/ExitSign/ExitSignGlow1.png" id="7_sxbti"]
+[ext_resource type="Texture2D" uid="uid://dcptvumax0stf" path="res://Assets/UI/Shop/ExitSign/ExitSignBase.png" id="8_6hexs"]
+[ext_resource type="Texture2D" uid="uid://bjkcvblfpygma" path="res://Assets/UI/Shop/ExitIcon2pressed.png" id="8_gfd43"]
+[ext_resource type="Texture2D" uid="uid://4a3g6gwuwiiu" path="res://Assets/UI/Shop/ExitIcon2hover.png" id="9_gnmsi"]
+[ext_resource type="Texture2D" uid="uid://de8ovbk3flxty" path="res://Assets/UI/Shop/ExitSign/ExitSignGlow2.png" id="9_psgl8"]
+[ext_resource type="Texture2D" uid="uid://bht3o1tntpttu" path="res://Assets/UI/Shop/ShopGrid.png" id="10_7kbmc"]
+[ext_resource type="Texture2D" uid="uid://c1do8wagvb255" path="res://Assets/UI/Shop/ExitSign/ExitSignPressed.png" id="10_iiysm"]
+[ext_resource type="Texture2D" uid="uid://q4g6mjjt5fd5" path="res://Assets/UI/Shop/ExitSign/ExitSignHover.png" id="11_jupk7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u3uhk"]
 font_size = 14
@@ -29,6 +30,7 @@ frame_2/texture = ExtResource("9_psgl8")
 frame_2/duration = 1.0
 
 [node name="RecycleCenterShop" type="Node2D"]
+script = ExtResource("1_wrmqw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1150, 640)
@@ -37,7 +39,7 @@ offset_bottom = 40.0
 texture = ExtResource("1_1f81g")
 expand_mode = 1
 
-[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+[node name="Shop_Keeper" type="TextureButton" parent="TextureRect"]
 layout_mode = 0
 offset_left = 613.0
 offset_top = 299.0
@@ -243,3 +245,7 @@ texture_normal = SubResource("AnimatedTexture_o2kh6")
 texture_pressed = ExtResource("10_iiysm")
 texture_hover = ExtResource("11_jupk7")
 stretch_mode = 0
+
+[connection signal="pressed" from="TextureRect/Shop_Keeper" to="." method="_on_shop_keeper_pressed"]
+[connection signal="pressed" from="ShopWindow/VBoxContainer/ShopTitleBar/Exit/Button" to="." method="_on_exit_shop_button_pressed"]
+[connection signal="pressed" from="Control/ExitSceneButton" to="." method="_on_exit_scene_button_pressed"]
